@@ -3,6 +3,9 @@ import fontInterSemiBold from './assets/fonts/Inter_SemiBold.json';
 import fontInterSemiBoldItalic from './assets/fonts/Inter_SemiBold_Italic.json';
 import fontInterExtraBold from './assets/fonts/Inter_ExtraBold.json';
 import fontInterExtraBoldItalic from './assets/fonts/Inter_ExtraBold_Italic.json';
+import fontYaHeiZh from './assets/fonts/YaHei_Regular.json';
+import fontCueZh from './assets/fonts/CueZh_Regular.json';
+
 import {
   getRoundedRectShape, getCustomRoundedRectShape, subtractMesh, unionMesh, getBoundingBoxSize,
 } from './utils';
@@ -126,8 +129,10 @@ class BaseTag3D {
     const fontRegularItalic = new THREE.Font(fontInterSemiBoldItalic);
     const fontBold = new THREE.Font(fontInterExtraBold);
     const fontBoldItalic = new THREE.Font(fontInterExtraBoldItalic);
+    const fontZh = new THREE.Font(fontYaHeiZh);
+    const fontCue = new THREE.Font(fontCueZh);
 
-    const fonts = [fontRegular, fontRegularItalic, fontBold, fontBoldItalic];
+    const fonts = [fontCue, fontZh, fontRegular, fontRegularItalic, fontBold, fontBoldItalic];
 
     const textLines = this.options.base.textMessage.trim().split('\n');
     let numLines = textLines.length;
